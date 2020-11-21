@@ -1,4 +1,4 @@
-package cinema_v14;
+package cinema;
 
 import java.util.Scanner;
 
@@ -199,13 +199,13 @@ public class Cinema {
 
     private static void currentStats(Cinema cinema) {
         System.out.printf("Number of purchased tickets: %d%n" +
-                          "Percentage: %.2f%%%n"              +
-                          "Current income: $%d%n"             +
-                          "Total income: $%d%n",
-                          cinema.getOccupiedSeats(),
-                          (cinema.getOccupiedSeats()/(cinema.getRows()*cinema.getSeatsPerRow()))*100,
-                          cinema.getCurrentIncome(),
-                          estimateTotalIncome(cinema));
+                        "Percentage: %.2f%%%n"              +
+                        "Current income: $%d%n"             +
+                        "Total income: $%d%n",
+                cinema.getOccupiedSeats(),
+                (cinema.getOccupiedSeats()/(cinema.getRows()*cinema.getSeatsPerRow()))*100,
+                cinema.getCurrentIncome(),
+                estimateTotalIncome(cinema));
     }
 
     public static void computeSelection(Cinema cinema) {
